@@ -55,7 +55,7 @@ export const offers = [
 
 export const contactDetails = {
   company: 'Changai Garden City Ltd',
-  phone: '07********',
+  phone: '+254 717 183 057',
   email: 'sales@changaigardencity.com',
   address: ['Off Njathaini Road', 'Nairobi County']
 }
