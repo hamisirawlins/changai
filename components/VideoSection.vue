@@ -27,7 +27,7 @@ onBeforeUnmount(() => observer?.disconnect())
       <h2>Experience<br><em>Changai.</em></h2>
     </div>
     <video class="project-video" controls muted playsinline preload="none" :poster="heroBg" aria-label="Changai Garden City site video">
-      <source v-if="showVideo" src="/videos/20260415_123831.mp4" type="video/mp4">
+      <source v-if="showVideo" src="/videos/video.mov" type="video/mp4">
     </video>
   </section>
 </template>

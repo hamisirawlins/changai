@@ -24,6 +24,13 @@ import { offers } from '~/data/site'
         </div>
       </article>
     </div>
+    <div class="offers-collective">
+      <p>
+        Commercial, Health, Religious, Educational and Social Center,<br />
+        Available Plots in Phases 2 &amp; 3
+      </p>
+      <a class="book" href="#contact">Book Your Plot</a>
+    </div>
   </section>
 </template>
 
@@ -69,11 +76,35 @@ import { offers } from '~/data/site'
 .status { background: var(--lime); color: var(--green); }
 .book { background: var(--green); color: white; }
 
+.offers-collective {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px 26px;
+  margin-top: 40px;
+}
+.offers-collective p {
+  margin: 0;
+  font: 700 16px/1.35 'DM Sans', sans-serif;
+  color: var(--green);
+}
+.offers-collective .book {
+  flex: none;
+  padding: 8px 22px;
+  border-radius: var(--pill);
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
 @media (max-width: 850px) {
   .offer-grid { gap: 35px 0; }
 }
 @media (max-width: 560px) {
   .offer-grid { grid-template-columns: 1fr; }
   .offer-card { padding: 25px 0; }
+  .offers-collective { flex-direction: column; align-items: flex-start; margin-top: 30px; }
+  .offers-collective p { font-size: 14px; }
+  .offers-collective p br { display: none; }
 }
 </style>
