@@ -49,15 +49,15 @@ import { offers } from '~/data/site'
   display: flex;
   flex-direction: column;
 }
-.category { font: 700 18px 'Playfair Display', serif; margin: 0; }
-.offer-card h3 { font-size: 13px; margin: 3px 0 12px; }
-.description, .price, .infrastructure, .offer-card ul { font-size: 11px; line-height: 1.35; }
-.description { min-height: 58px; margin: 0 0 12px; }
+.category { font: 700 20px 'Playfair Display', serif; margin: 0; }
+.offer-card h3 { font-size: 15px; margin: 3px 0 12px; }
+.description, .price, .infrastructure, .offer-card ul { font-size: 13px; line-height: 1.35; }
+.description { min-height: 70px; margin: 0 0 12px; }
 .price, .infrastructure { margin: 0 0 5px; }
 .infrastructure { font-weight: 700; }
 .offer-card ul {
   padding-left: 17px;
-  min-height: 100px;
+  min-height: 110px;
   margin: 0;
   font-weight: 600;
   list-style: disc;
