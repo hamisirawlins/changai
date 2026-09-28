@@ -24,32 +24,29 @@ export const parcels = [
 
 export const offers = [
   {
-    category: 'Changai Valley',
-    title: '0.25 Acre Residential Plots',
-    description: 'Scenic residential plots in a controlled gated community environment, ideal for building a first or second home.',
-    price: 'From 4.5 Million',
-    bullets: ['Controlled gated community development', 'Graded Roads', 'Street lighting', 'Power and Water Supply connection close by', 'Clean Title']
+    title: 'Residential',
+    size: '1/4-acre · Changai Valley',
+    price: 'From KES 4.5M',
+    bullets: ['Ideal for a first or second home', 'Gated community', 'Graded roads & street lighting', 'Power and water nearby', 'Clean title']
   },
   {
-    category: 'Changai Valley',
-    title: '0.5 Acre Residential Plots',
-    description: 'Scenic residential plots in a controlled gated community environment, ideal for building a first or second home.',
-    price: 'From 8.5 Million',
-    bullets: ['Controlled gated community development', 'Graded Roads', 'Street lighting', 'Power and Water Supply close by', 'Clean Title']
+    title: 'Residential',
+    size: '1/2-acre · Changai Valley',
+    price: 'From KES 8.5M',
+    bullets: ['Ideal for a first or second home', 'Gated community', 'Graded roads & street lighting', 'Power and water nearby', 'Clean title']
   },
   {
-    category: 'Light Industrial',
-    title: '0.25 Acre Industrial Plots',
-    description: '0.25 acre Industrial Plots located at the edge of Changai Valley with multiple access routes.',
-    price: 'From 6 Million',
-    bullets: ['Controlled environment within the larger scheme', 'Graded Roads', 'Power and Water Supply connection close by', 'Street Lighting', 'Clean Title']
+    title: 'Light industrial',
+    size: '1/4-acre',
+    price: 'From KES 6M',
+    bullets: ['Multiple access routes', 'Controlled scheme', 'Graded roads & street lighting', 'Power and water nearby', 'Clean title']
   },
   {
-    category: 'Agricultural',
-    title: '2.5 Acre Agricultural Plots',
-    description: 'Scenic agricultural plots located at the edge of the valley, ideal for building a farm house and practising subsistence farming.',
-    price: 'From KES. 8.5 Million per Acre',
-    bullets: ['Controlled gated community development', 'Graded Roads', 'Street lighting', 'Power and Water Supply close by', 'Clean Title']
+    title: 'Agricultural',
+    size: '2.5-acre',
+    price: 'From KES 8.5M',
+    priceNote: 'per acre',
+    bullets: ['Ideal for a farmhouse & subsistence farming', 'Gated community', 'Graded roads & street lighting', 'Power and water nearby', 'Clean title']
   }
 ]
 

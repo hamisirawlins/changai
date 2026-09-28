@@ -4,6 +4,7 @@
   --green: #0b4939;
   --deep: #062f26;
   --lime: #91c85a;
+  --lime-dark: #56922d;
   --cream: #f5f7f0;
   --ink: #22302a;
   --sage: #edf3e5;
@@ -53,8 +54,8 @@ h1 em, h2 em { color: var(--lime); font-style: normal; }
 .outline { border: 1px solid var(--green); color: var(--green); }
 
 /* Section shells */
-/* Keep anchored headings clear of the fixed masthead */
-main section { scroll-margin-top: 250px; }
+/* Keep anchored headings clear of the fixed masthead (it shrinks to ~60px once scrolling starts) */
+main section { scroll-margin-top: 80px; }
 .section {
   max-width: 1180px;
   margin: auto;
@@ -94,11 +95,7 @@ main section { scroll-margin-top: 250px; }
   -webkit-mask-image: radial-gradient(150% 95% at 50% 100%, rgba(0,0,0,1) 0%, rgba(0,0,0,.92) 42%, rgba(0,0,0,.6) 70%, rgba(0,0,0,.18) 88%, transparent 100%);
 }
 
-@media (max-width: 850px) {
-  main section { scroll-margin-top: 200px; }
-}
 @media (max-width: 560px) {
-  main section { scroll-margin-top: 150px; }
   .section, .section.full-bleed { padding: 75px 20px; }
   .section-photo::after { height: 60%; opacity: .56; }
 }

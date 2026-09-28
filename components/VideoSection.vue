@@ -41,6 +41,7 @@ onBeforeUnmount(() => observer?.disconnect())
   background: var(--sage);
 }
 .video-copy h2 { font-size: 48px; }
+.video-copy h2 em { color: var(--lime-dark); }
 .project-video {
   display: block;
   width: 100%;

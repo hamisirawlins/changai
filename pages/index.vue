@@ -12,7 +12,7 @@ const onScroll = () => {
   let current = 'home'
   for (const { id } of navLinks) {
     const el = document.getElementById(id)
-    if (el && el.getBoundingClientRect().top <= 280) current = id
+    if (el && el.getBoundingClientRect().top <= 120) current = id
   }
   activeSection.value = current
 }

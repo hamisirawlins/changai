@@ -58,9 +58,12 @@ const go = (id: string) => { menuOpen.value = false; emit('navigate', id) }
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: padding .3s;
 }
+.header.scrolled .header-inner { padding: 8px 32px; }
 .brand { display: flex; align-items: center; text-decoration: none; color: var(--green); }
-.brand .logo { display: block; height: 200px; width: auto; }
+.brand .logo { display: block; height: 200px; width: auto; transition: height .3s; }
+.header.scrolled .brand .logo { height: 40px; }
 
 nav { display: flex; align-items: center; }
 nav > a {
@@ -114,12 +117,14 @@ nav a.active { border-bottom-color: var(--lime); }
     border-radius: var(--radius);
     box-shadow: 0 14px 40px rgba(6,47,38,.16);
   }
+  .header.scrolled nav.open { top: calc(100% + 4px); }
   nav.open > a { padding: 0 0 4px; }
   nav.open > a + a::before { content: none; }
   nav.open .socials { margin-left: 0; }
 }
 @media (max-width: 560px) {
   .header-inner { padding: 14px 20px; }
+  .header.scrolled .header-inner { padding: 8px 20px; }
   .brand .logo { height: 110px; }
 }
 </style>

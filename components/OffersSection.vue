@@ -9,19 +9,14 @@ import { offers } from '~/data/site'
       <h2>Find Your Changai <em>Valley Offers.</em></h2>
     </div>
     <div class="offer-grid">
-      <article v-for="offer in offers" :key="offer.title" class="offer-card">
-        <p v-if="offer.category" class="category">{{ offer.category }}</p>
+      <article v-for="offer in offers" :key="`${offer.title}-${offer.size}`" class="offer-card">
         <h3>{{ offer.title }}</h3>
-        <p class="description">{{ offer.description }}</p>
-        <p class="price">- Price: <strong>{{ offer.price }}</strong></p>
-        <p class="infrastructure">Infrastructure:</p>
+        <p class="size">{{ offer.size }}</p>
+        <p class="price">{{ offer.price }}<small v-if="offer.priceNote"> {{ offer.priceNote }}</small></p>
         <ul>
           <li v-for="bullet in offer.bullets" :key="bullet">{{ bullet }}</li>
         </ul>
-        <div class="actions">
-          <a class="status" href="#contact">Status: Available</a>
-          <a class="book" href="#contact">Book Your Plot</a>
-        </div>
+        <a class="book" href="#contact">Reserve now</a>
       </article>
     </div>
     <div class="offers-collective">
@@ -29,7 +24,7 @@ import { offers } from '~/data/site'
         Commercial, Health, Religious, Educational and Social Center,<br />
         Available Plots in Phases 2 &amp; 3
       </p>
-      <a class="book" href="#contact">Book Your Plot</a>
+      <a class="book" href="#contact">Reserve now</a>
     </div>
   </section>
 </template>
@@ -39,42 +34,42 @@ import { offers } from '~/data/site'
 .offers-heading { text-align: center; margin-bottom: 42px; }
 .offers-heading h2 { font-size: 35px; margin: 0; }
 
-.offer-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+.offer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; }
 .offer-card {
-  padding: 22px 24px;
-  min-height: 355px;
+  padding: 28px 26px 30px;
   border-radius: var(--radius);
-  background: rgba(255,255,255,.86);
+  background: rgba(255,255,255,.9);
   backdrop-filter: saturate(110%) blur(1px);
   display: flex;
   flex-direction: column;
 }
-.category { font: 700 20px 'Playfair Display', serif; margin: 0; }
-.offer-card h3 { font-size: 15px; margin: 3px 0 12px; }
-.description, .price, .infrastructure, .offer-card ul { font-size: 13px; line-height: 1.35; }
-.description { min-height: 70px; margin: 0 0 12px; }
-.price, .infrastructure { margin: 0 0 5px; }
-.infrastructure { font-weight: 700; }
+.offer-card h3 { margin: 0 0 4px; font-size: 18px; font-weight: 700; }
+.size { margin: 0 0 14px; font-size: 13px; color: rgba(11,73,57,.7); }
+.price { margin: 0 0 18px; font: 700 28px/1.1 'DM Sans', sans-serif; color: #2f7a37; }
+.price small { font-size: 14px; font-weight: 600; }
 .offer-card ul {
-  padding-left: 17px;
-  min-height: 110px;
-  margin: 0;
-  font-weight: 600;
+  padding-left: 18px;
+  margin: 0 0 26px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
   list-style: disc;
+  display: grid;
+  gap: 9px;
 }
 .offer-card li::marker { color: var(--lime); }
 
-.actions { margin-top: auto; display: flex; flex-direction: column; gap: 7px; max-width: 145px; }
-.actions a {
-  padding: 7px 12px;
+.book {
+  margin-top: auto;
+  align-self: center;
+  padding: 11px 26px;
   border-radius: var(--pill);
-  text-align: center;
-  font-size: 10px;
+  background: var(--green);
+  color: white;
+  font-size: 13px;
   font-weight: 700;
   text-decoration: none;
 }
-.status { background: var(--lime); color: var(--green); }
-.book { background: var(--green); color: white; }
 
 .offers-collective {
   display: flex;
@@ -88,21 +83,10 @@ import { offers } from '~/data/site'
   font: 700 16px/1.35 'DM Sans', sans-serif;
   color: var(--green);
 }
-.offers-collective .book {
-  flex: none;
-  padding: 8px 22px;
-  border-radius: var(--pill);
-  font-size: 11px;
-  font-weight: 700;
-  text-decoration: none;
-}
+.offers-collective .book { flex: none; margin-top: 0; }
 
-@media (max-width: 850px) {
-  .offer-grid { gap: 35px 0; }
-}
 @media (max-width: 560px) {
-  .offer-grid { grid-template-columns: 1fr; }
-  .offer-card { padding: 25px 0; }
+  .offer-grid { grid-template-columns: 1fr; gap: 20px; }
   .offers-collective { flex-direction: column; align-items: flex-start; margin-top: 30px; }
   .offers-collective p { font-size: 14px; }
   .offers-collective p br { display: none; }
