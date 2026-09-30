@@ -5,8 +5,9 @@ const year = new Date().getFullYear()
 
 <template>
   <footer>
-    <a class="brand" href="#home"><img class="logo" :src="logo" alt="Changai Garden City"></a>
+    <NuxtLink class="brand" to="/#home"><img class="logo" :src="logo" alt="Changai Garden City"></NuxtLink>
     <p>Living meets nature.</p>
+    <NuxtLink class="button primary" to="/careers">Careers</NuxtLink>
     <span>© {{ year }} Changai Garden City</span>
   </footer>
 </template>

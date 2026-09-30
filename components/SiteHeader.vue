@@ -13,7 +13,7 @@ const go = (id: string) => { menuOpen.value = false; emit('navigate', id) }
 <template>
   <header class="header" :class="{ scrolled }">
     <div class="header-inner">
-      <a class="brand" href="#home" @click.prevent="go('home')">
+      <a class="brand" href="/#home" @click.prevent="go('home')">
         <img class="logo" :src="logo" alt="Changai Garden City">
       </a>
       <button class="menu" aria-label="Toggle menu" @click="menuOpen = !menuOpen">☰</button>
@@ -21,7 +21,7 @@ const go = (id: string) => { menuOpen.value = false; emit('navigate', id) }
         <a
           v-for="link in navLinks"
           :key="link.id"
-          :href="`#${link.id}`"
+          :href="`/#${link.id}`"
           :class="{ active: activeSection === link.id }"
           @click.prevent="go(link.id)"
         >{{ link.label }}</a>

@@ -58,3 +58,17 @@ export const contactDetails = {
 }
 
 export const changaiCenter: [number, number] = [37.18652, -0.90058]
+
+export type OpenRole = {
+  title: string
+  department: string
+  type: 'Full-time' | 'Part-time' | 'Contract' | 'Internship'
+  location: string
+  summary: string
+}
+
+/** Roles listed on /careers. Leave empty to show "No Current Roles". */
+export const openRoles: OpenRole[] = []
+
+/** Where CVs and applications from /careers are sent. */
+export const careersEmail = contactDetails.email
