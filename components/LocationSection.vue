@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import bg from '~/assets/bgs/web/20260415_123909.jpg'
 import { ref } from 'vue'
-import { changaiCenter } from '~/data/site'
+import { changaiCenter, changaiRouteUrl } from '~/data/site'
 
 const mapEl = ref<HTMLElement | null>(null)
 const { mapError } = useMapbox(mapEl, changaiCenter)
@@ -13,7 +13,7 @@ const { mapError } = useMapbox(mapEl, changaiCenter)
       <p class="eyebrow">Location / map</p>
       <h2>Connected to<br><em>everything.</em></h2>
       <p>Find Changai Garden City at the centre of a growing network of towns, services and transport links.</p>
-      <a class="button primary" href="#contact">Get directions ↗</a>
+      <a class="button primary" :href="changaiRouteUrl" target="_blank" rel="noopener">Get directions ↗</a>
     </div>
     <div class="maps">
       <div class="map-static" role="img" aria-label="Illustrated map: Changai Garden City Phase 1, between Makuyu Centre and Kenol Town">

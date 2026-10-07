@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { z } from 'zod'
-import { contactDetails, changaiCenter } from '~/data/site'
+import { contactDetails, changaiRouteUrl as routeUrl } from '~/data/site'
 
 const schema = z.object({
   firstName: z.string().trim().min(2, 'Please enter your first name'),
@@ -10,9 +10,6 @@ const schema = z.object({
   phone: z.string().trim().min(7, 'Enter a valid international phone number').regex(/^\+?[0-9 ()-]{7,20}$/, 'Use an international number, e.g. +254 700 000 000'),
   message: z.string().trim().min(10, 'Please tell us how we can help')
 })
-
-const [lng, lat] = changaiCenter
-const routeUrl = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`
 
 const submitted = ref(false)
 const errors = ref<Record<string, string>>({})

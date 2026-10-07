@@ -59,6 +59,8 @@ export const contactDetails = {
 
 export const changaiCenter: [number, number] = [37.18652, -0.90058]
 
+export const changaiRouteUrl = `https://www.google.com/maps/dir/?api=1&destination=${changaiCenter[1]},${changaiCenter[0]}`
+
 export type OpenRole = {
   title: string
   department: string
